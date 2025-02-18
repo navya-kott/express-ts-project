@@ -1,9 +1,11 @@
 import { userCreation as create } from '../service/user_create';
 
-export const userCreation = (req: any) => {
+export const userCreation = async (req: any,res:any) => {
     try {
-        const { name } = req.body
-       const response= create(name)
+       const response= await create(req.body)
+       return res.json({
+        response
+       })
 
     } catch (error) {
         console.log(error);

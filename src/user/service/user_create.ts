@@ -1,10 +1,10 @@
 import { User } from '@/schema/user'
 
-export const userCreation=(name:any)=>{
+export const userCreation=async (params:any)=>{
     try {
-        return User.create({
-            name
-        })
+        console.log("=================:",params);
+        
+        return await User.create( params )
         
     } catch (error) {
         console.log(error);
