@@ -2,10 +2,15 @@ import express from 'express'
 import connect from "./config/mongodb"
 import CarRouter from "./car/router"
 import UserRouter from "./user/router"
-
 const app = express()
 import * as dotenv from 'dotenv';
 import cors from "cors"
+import {greet} from "Greet"
+
+
+const x=ExampleNamespace.PI
+const f=ExampleNamespace.validation
+const z=ExampleNamespace.thadaka
 
 dotenv.config();
 app.use(cors())
