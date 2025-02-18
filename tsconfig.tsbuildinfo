@@ -1,0 +1,1 @@
+{"root":["./src/index.ts","./src/config/mongodb.ts","./src/schema/user.ts","./src/user/controller/user_create.ts","./src/user/service/user_create.ts"],"version":"5.7.3"}
