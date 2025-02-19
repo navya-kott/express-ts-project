@@ -9,12 +9,12 @@ const UserSchema: Schema = new mongoose.Schema(
         role: {
             type: String,
             required: true,
-            unique:false
+            unique: false
         },
         email: {
             type: String,
             required: true,
-            unique:false
+            unique: false
 
         },
         createdAt: {
@@ -23,5 +23,5 @@ const UserSchema: Schema = new mongoose.Schema(
         }
     })
 
-
+UserSchema.index({ name: "text" })
 export const User = mongoose.model("User", UserSchema)

@@ -7,11 +7,6 @@ import * as dotenv from 'dotenv';
 import cors from "cors"
 import {greet} from "Greet"
 
-
-const x=ExampleNamespace.PI
-const f=ExampleNamespace.validation
-const z=ExampleNamespace.thadaka
-
 dotenv.config();
 app.use(cors())
 app.use(express.json());
