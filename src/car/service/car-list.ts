@@ -7,7 +7,7 @@ export const carList = async () => {
         $group: {
           _id: "$brand",
           model: { $first: "$model" },
-          year: { $first: "$year" }    
+          year: { $first: "$year" }
         }
       },
       {
