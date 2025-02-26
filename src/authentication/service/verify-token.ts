@@ -1,13 +1,11 @@
 import jwt from "jsonwebtoken"
 
-export const generateJwtToken = async (data: any) => {
-    try {        
+export const verifyToken = async (token: any) => {
+    try {
         const secret: any = process.env.JWT_SECRET
-        const token = jwt.sign(data, secret)
-        return token
-
+        const data = jwt.verify(token, secret)
+        return data
     } catch (error) {
         console.log(error);
     }
-
 }
