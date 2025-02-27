@@ -24,6 +24,10 @@ const CarSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        image: {
+            type: Buffer,
+            required: false
+        },
         createdAt: {
             type: Date,
             default: new Date()
