@@ -8,13 +8,14 @@ import { vehicleData } from './controller/vehicles-list'
 import { registerCarDetails } from './controller/car-registration'
 
 import multer from "multer"
-const upload=multer()
+import { fetchCarDetails } from './controller/car-details'
+const upload = multer()
 
 router.get("/", carlist)
 router.get("/model-by-brand", modelsListByBrand)
 router.get("/models", listModels)
 router.get("/brand/", brandData)
 router.get("/vehicle", vehicleData)
-router.post("/",upload.single('file'), registerCarDetails)
-
+router.post("/", upload.single('file'), registerCarDetails)
+router.get("/:id", fetchCarDetails)
 export default router
