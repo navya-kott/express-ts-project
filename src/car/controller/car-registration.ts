@@ -2,14 +2,13 @@ import { carRegistration } from "../service/car-registration";
 
 export const registerCarDetails = async (req: any, res: any) => {
     try {
+        const {userId}=req.user
         const { brand, model, year, place, number } = req.body
         const params = {
             image: req.file.buffer,
-            brand, model, year, place, number
+            brand, model, year, place, number,
+            userId
         }
-
-        console.log("========",params);
-        
         const response = await carRegistration(params)
 
         return res.json({

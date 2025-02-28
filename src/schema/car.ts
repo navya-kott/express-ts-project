@@ -2,6 +2,10 @@ import mongoose from "mongoose";
 
 const CarSchema = new mongoose.Schema(
     {
+        userId: {
+            type: String,
+            required:false
+        },
         brand: {
             type: String,
             required: true,
@@ -24,6 +28,7 @@ const CarSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+      
         image: {
             type: Buffer,
             required: false
